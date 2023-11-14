@@ -12,9 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Big Ballas
+  companyName: Frazer
   productName: Eli's Vault
-  defaultCursor: {fileID: 2800000, guid: 4f6dcb3bc012f9c439961cd00a621636, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -279,7 +279,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ed75c612296cfd341b6a11fb8a1facef, type: 3}
+      m_Icon: {fileID: 2800000, guid: 3c547ba3ee2a2ce4c89f483efb999e88, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -859,8 +859,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: My project (12)
-  metroPackageVersion: 
+  metroPackageName: Myproject12
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -868,7 +868,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: My project (12)
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Eli's Vault
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

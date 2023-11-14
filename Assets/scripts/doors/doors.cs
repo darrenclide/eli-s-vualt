@@ -7,7 +7,7 @@ public class doors : MonoBehaviour
     public bool _isDoorOpen = false;
     Vector3 _doorClosedPos;
     Vector3 _doorOpenPos;
-    float _doorSpeed = 10f;
+    float _doorSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,14 @@ public class doors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKey("k") == true) 
+        {
+            _isDoorOpen = true;
+        }
+        else if(Input.GetKey("l") == true)
+        {
+            _isDoorOpen= false;
+        }
         if(_isDoorOpen)
         {
             OpenDoor();
