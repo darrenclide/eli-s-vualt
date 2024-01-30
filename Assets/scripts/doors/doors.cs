@@ -8,12 +8,17 @@ public class doors : MonoBehaviour
     Vector3 _doorClosedPos;
     Vector3 _doorOpenPos;
     float _doorSpeed = 1f;
+    public AudioSource audioSource;
+    public AudioClip door;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
-
+    void PlaySoundEffect()
+    {
+        audioSource.PlayOneShot(door, 0.7f); // play audio clip with volume 0.7
+    }
     void Awake()
     {
         _doorClosedPos = transform.position;
@@ -25,11 +30,13 @@ public class doors : MonoBehaviour
     {
         if(Input.GetKey("k") == true) 
         {
+            PlaySoundEffect();
             _isDoorOpen = true;
         }
         else if(Input.GetKey("l") == true)
         {
-            _isDoorOpen= false;
+            PlaySoundEffect();
+            _isDoorOpen = false;
         }
         if(_isDoorOpen)
         {

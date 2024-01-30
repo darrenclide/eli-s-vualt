@@ -13,12 +13,23 @@ public class playermovement : MonoBehaviour
     private bool isTouchingGround;
     private bool isAttacking;
     private int force;
+    public AudioSource audioSource;
+    public AudioClip  jump;
+    public AudioClip slash;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
-
+    void PlaySoundJump()
+    {
+        audioSource.PlayOneShot(jump, 0.7f); // play audio clip with volume 0.7
+    }
+    void PlaySoundSlash()
+    {
+        audioSource.PlayOneShot(slash, 0.7f);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +41,7 @@ public class playermovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            PlaySoundSlash();
             animator.SetTrigger("attack");
         }
         if(Input.GetKey("left shift") == true)
@@ -60,6 +72,7 @@ public class playermovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) == true && isTouchingGround)
         {
+            PlaySoundJump();
             rb.AddForce(new Vector3(0, force, 0), ForceMode2D.Impulse);
             animator.SetBool("hop", true);
         }
